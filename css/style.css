@@ -1,0 +1,175 @@
+.header-container {
+  width: 100%;
+  display: flex;
+  max-width: 1200px;
+ }
+#header-content {
+  justify-content: center;
+}
+
+.home-first {
+  display: flex;
+  justify-content: center;
+}
+.home-bloques {
+  max-width: 1200px;
+}
+
+.glider > div {
+  width: 800px;
+  height: 440px;
+  /*background-image: url('../img/slider/slider-1.jpg');
+  background-size: cover !important;
+  background-position: center;*/
+}
+.glider-background {
+  background-image: url('../img/slider/slider-1.jpg');
+  background-size: cover !important;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  
+  flex-flow: column;
+  justify-content: center;
+}
+.glider-background h3 {
+  color: #fff;
+  margin-bottom: 15px !important;
+}
+.glider-background span {
+  color: #fff;
+}
+.glider-background.one {
+  background-image: url('../img/slider/slider-1.jpg');
+}
+.glider-background.two {
+  background-image: url('../img/slider/slider-2.jpg');
+}
+.glider-background.three {
+  background-image: url('../img/slider/slider-3.jpg');
+}
+.slide-texto {
+  width: 450px;
+  padding: 40px;
+  z-index: 999;
+}
+.slide-texto h3 {
+  font-size: 45px !important;
+  font-weight: 700;
+}
+.slide-texto span {
+  font-size: 32px;
+  font-weight: 300;
+}
+.slide-overlay {
+  width: 800px;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to right,rgb(0, 0, 0) 0%, rgba(50, 30, 7, 0.2) 100%);
+  mix-blend-mode: multiply;
+}
+.side-hero h3 {
+  font-weight: 700;
+}
+.glider-contain {
+  width: 800px !important;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.glider.draggable {
+  scrollbar-width: none;
+}
+.dots {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+ }
+ .glider-prev,.glider-next {
+  font-size: 50px !important;
+  color: #fff !important;
+
+}
+ .glider-prev {
+  position: absolute !important;
+  left: 5px !important;
+  top: 38% !important;
+}
+.glider-next {
+  right: 5px !important;
+  left: unset !important;
+  top: 38% !important;
+}
+
+.hero-home {
+    background-image: url('../img/bg-home.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+#footer {
+    background-color: #ececec;    
+}
+.loop .card {
+    width: 49%;
+  }
+  
+.loop {
+    display: flex;
+    column-gap: 1%;
+    flex-wrap: wrap;
+    /*justify-content: center;*/
+  }
+.mini-cart {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    width: 400px;
+    max-width: unset;
+    display: none;
+  }
+#zona-envio {
+    display: none;
+  }
+.visible {
+    display: block !important;
+  }
+
+#product-list .card {
+    display: flex;
+    height: 170px;
+  }
+
+#product-list .card .card-image {
+    width: 40%;
+  }
+
+
+
+  .card-inner-image {
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 0.25rem;
+    object-fit: cover;
+  }
+
+  .card-image.card-shop figure {
+    height: 100%;
+  }
+  .card-image.card-shop img {
+    height: 100%;
+  }
+
+  .account-button {
+    display: none;
+  }
+
+  .modal-image {
+    border-radius: 0.25rem;
+  }
+
+  .content-modal .titulo {
+    margin-bottom: 5px;
+  }
+  .form-inputs {
+    margin-top: 15px;
+  }

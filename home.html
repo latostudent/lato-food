@@ -1,0 +1,120 @@
+<section class="container mb-5 mt-4 home-first">
+  <div class="tile is-ancestor home-bloques">
+    <div class="tile is-parent">
+      <div class="tile is-child">
+        <div class="glider-contain"> <!-- SLIDER -->
+          <div class="glider">
+            <div class="glider-item">
+              <div class="slide-overlay"></div>
+              <div class="glider-background one">
+                <div class="slide-texto">
+                <h3 class="title is-3">Promociónes en hamburguesas</h3><span class="subtitle">Pága 2 y llevate 3</span>
+                </div>
+              </div>
+            </div>
+            <div class="glider-item">
+              <div class="slide-overlay"></div>
+              <div class="glider-background two">
+                <div class="slide-texto">
+                <h3 class="title is-3">Combos especiales</h3><span class="subtitle">Llevalos con papas medianas</span>
+                </div>
+              </div>
+            </div>
+            <div class="glider-item">
+              <div class="slide-overlay"></div>
+              <div class="glider-background three">
+                <div class="slide-texto">
+                <h3 class="title is-3">Delivery a toda Lima</h3><span class="subtitle">Gratis por pedidos mayores a S/. 30</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <button aria-label="Previous" class="glider-prev">‹</button>
+          <button aria-label="Next" class="glider-next">›</button>
+          <div role="tablist" class="dots"></div>
+        </div> <!-- SLIDER -->
+      </div>
+    </div>
+    <div class="tile is-4 is-vertical is-parent side-hero">
+      <div class="tile is-child notification is-primary">
+        <h3 class="title">Promo MENÚ</h3>
+        <span class="subtitle is-4">20% descuentos de descuento en almuerzos los dias lunes.</span>
+      </div>
+      <div class="tile is-child notification is-info">
+        <h3 class="title">Pollito Day</h3>
+        <span class="subtitle is-4">Hasta un 50% en pollos en <strong>El dia del Pollo a la brasa</strong>.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div class="box cta notification is-dark">
+    <p class="has-text-centered">
+      <span class="tag is-primary">NUEVO</span> Prueba nuestras nuevas Pizzas en tamaños PERSONAL, GRANDE Y FAMILIAR | 15% de Descuento.
+    </p>
+  </div>
+
+  <section class="container mb-6">
+    <div class="block">
+        <h2 class="title is-2 has-text-centered">Lo más pedido</h2>
+    </div>
+    <div class="columns features">
+      <div class="column is-3 sidebar-home">
+        <div class="tile notification is-light is-child">
+          <div class="block"><p class="title is-5">Categorías</p></div>
+          
+            <div class="filter block">
+              <div class="buttons">
+                <button class="button is-success filter-button filter-todos" filter="todos">Todos</button>
+              </div>
+            <div class="buttons">
+              <button class="button is-info filter-button" filter="pizza">Pizzas</button>
+              <button class="button is-info filter-button" filter="hamburguesa">Hamburguesas</button>
+              <button class="button is-info filter-button" filter="pollo">Pollos</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div id="product-list" class="column is-9 loop">
+        
+      </div>
+
+    </div>
+    
+  </section>
+  
+  <script>
+    $('.glider').ready(function(){
+    new Glider(document.querySelector('.glider'), {
+        draggable: true,
+        dots: '.dots',
+        arrows: {
+          prev: '.glider-prev',
+          next: '.glider-next'
+        },
+        rewind: true
+      });
+});
+
+$(document).ready(function(){
+    $(".filter-button").click(function(){
+        
+        console.log('filtro click');
+        var filterValue = $(this).attr('filter');
+        console.log(filterValue);
+        loadFinish(8,'filtro',1,filterValue);
+
+    });
+
+    $(".filter-todos").click(function(){
+        
+        console.log('filtro todos');
+        loadFinish(8,'inicio',0,'pizza');
+
+    });
+});
+  </script>
+
+  
