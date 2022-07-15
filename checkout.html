@@ -77,7 +77,21 @@
                               
                               
 
-                              
+                              <div class="field">
+                                <label class="label">Ciudad</label>
+                             
+                              <div class="field-body">
+                                <div class="field">
+                                  <div class="control">
+                                    <input id="city-field" class="input" type="text" placeholder="" readonly>
+                                  </div>
+                                  <!--<p class="help is-danger">
+                                    This field is required
+                                  </p> -->
+                                </div>
+                              </div>
+                            </div>
+
                               <div class="field">
                                 <label class="label">Ingrese su dirección</label>
                              
@@ -152,7 +166,9 @@
                   </tfoot>
                 </table>
                 <!--FIN TOTAL TABLA-->
+                <div id="pay-button">
                 <button class="button is-link">Pagar</button>
+                </div>
               </div>
               <div class="tile is-child box">
                 <p class="title is-6">Aplicar cupon</p>
@@ -176,3 +192,36 @@
     
   </section>
 
+<script>
+  
+var geoData;
+var ubiCliente = {};
+
+
+$(document).ready(function(){
+var settings = {
+    //"url": "https://api.ipbase.com/v2/info?apikey=xqlBqNe3B7PP3dAtfVM9pVcn6wIExoJ6Q1Cveo4U",
+    "url": "https://ipapi.co/json/",
+    "method": "GET",
+    "async": false
+    //"timeout": 0,
+  };
+$.ajax(settings).done(function (response) {
+    console.log(response);
+    geoData = response;
+  });
+  console.log(geoData);
+  ubiCliente.region = geoData.city;
+  $('#city-field').val(ubiCliente.region);
+
+  if (geoData.city != "Lima") {
+    $('#pay-button').empty();
+    $('#pay-button').html(`
+      <div class="notification is-danger is-light">
+      <span>Actualmente solo hacemos delivery en <strong>Lima</strong></span>
+      </div>
+    `)
+  }
+});
+
+</script>
