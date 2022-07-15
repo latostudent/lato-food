@@ -2,9 +2,6 @@
  * SLIDER
  */
 
-
-
-
 /**
  * Navigation
  */
